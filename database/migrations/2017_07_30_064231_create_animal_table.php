@@ -27,7 +27,7 @@ class CreateAnimalTable extends Migration
             $table->dateTime('updated_at');
         });
 
-        Schema::table('animal', function($table) {
+        Schema::table('animal', function (Blueprint $table) {
             $table->foreign("father")->references("id")->on("animal");
             $table->foreign("mother")->references("id")->on("animal");
             $table->unique(["name", "dob"]);
