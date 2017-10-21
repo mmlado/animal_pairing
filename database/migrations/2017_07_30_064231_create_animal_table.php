@@ -18,7 +18,7 @@ class CreateAnimalTable extends Migration
             $table->increments('id');
             $table->string("name", 255);
             $table->integer("dob")->nullable();
-            $table->enum("gender", ["male", "female"]);
+            $table->boolean("female")->default(true);
             $table->integer("father")->unsigned()->nullable();
             $table->integer("mother")->unsigned()->nullable();
             $table->boolean("active")->default(false);
