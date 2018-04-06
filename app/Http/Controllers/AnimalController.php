@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Animal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
@@ -14,8 +15,10 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        return view('animal.index', [
+        $animals = DB::table('animal')->simplePaginate(10);
 
+        return view('animal.index', [
+            'animals' => $animals,
         ]);
     }
 
