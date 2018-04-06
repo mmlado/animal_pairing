@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <table class="table-responsive table-bordered">
+    <table class="table table-responsive table-bordered">
         <tr>
             <th>Name</th>
             <th>Dob</th>
