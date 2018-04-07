@@ -1,7 +1,7 @@
 # Animal Pairing
 
 <p align="center">
-<a href="https://travis-ci.org/mmlado/animal_pairing"><img src="https://travis-ci.org/mmlado/animal_pairing.svg?branch=master" alt="Build Status"></a>
+<a href="https://travis-ci.org/mmlado/animal_pairing"><img src="https://travis-ci.org/mmlado/animal_pairing.svg" alt="Build Status"></a>
 </p>
 
 ## About Animal Pairing
