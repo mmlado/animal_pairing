@@ -53,7 +53,7 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        return view('animal.view', [
+        return view('animal.show', [
 
         ]);
     }

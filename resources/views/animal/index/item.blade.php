@@ -4,6 +4,8 @@
     <td>{{$animal->own ? "Yes" : "No"}}</td>
     <td>{{$animal->active ? "Yes" : "No"}}</td>
     <td>
-        @include('animal.index.options')
+        @include('animal.index.options', [
+            'id' => $animal->id
+        ])
     </td>
 </tr>
