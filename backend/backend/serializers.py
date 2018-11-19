@@ -4,4 +4,4 @@ from .models import Animal
 class AnimalSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Animal
-        fields = ('id', 'name', 'dob', 'active', 'own')
+        fields = ('id', 'name', 'dob', 'gender', 'active', 'own', 'father', 'mother')
