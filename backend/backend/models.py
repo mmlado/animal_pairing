@@ -13,3 +13,6 @@ class Animal(models.Model):
     gender = models.CharField(max_length = 6, choices = GENDER_CHOICES, default = FEMALE)
     active = models.BooleanField()
     own = models.BooleanField()
+
+    class Meta:
+        unique_together = ("name", "dob")
