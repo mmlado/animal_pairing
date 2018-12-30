@@ -9,11 +9,11 @@ class AnimalSerializer(serializers.ModelSerializer):
                 'active', 'own', 'father', 'mother')
 
     def validate_father(self, father):
-        if (father.gender != Animal.MALE):
+        if (father and (father.gender != Animal.MALE)):
             raise serializers.ValidationError('The father has to be male.')
 
     def validate_mother(self, mother):
-        if (mother.gender != Animal.FEMALE):
+        if (mother and (mother.gender != Animal.FEMALE)):
             raise serializers.ValidationError('The mother has to be female.')
 
     def validate_dob(self, dob):
