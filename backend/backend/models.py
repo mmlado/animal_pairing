@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxLengthValidator
 
 class Animal(models.Model):
     MALE = 'male'
@@ -8,7 +9,7 @@ class Animal(models.Model):
 
     father = models.ForeignKey("self", null = True, on_delete = models.SET_NULL, related_name = "child_father")
     mother = models.ForeignKey("self", null = True, on_delete = models.SET_NULL, related_name = "child_mother")
-    name = models.CharField(max_length = 100)
+    name = models.CharField(max_length = 100, validators = [MaxLengthValidator(100)])
     dob = models.IntegerField()
     gender = models.CharField(max_length = 6, choices = GENDER_CHOICES, default = FEMALE)
     active = models.BooleanField()
